@@ -1,0 +1,2 @@
+fix:
+	dart fix --apply
