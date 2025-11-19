@@ -13,6 +13,14 @@ class IndustryList extends ConsumerStatefulWidget {
 }
 
 class _IndustryListState extends ConsumerState<IndustryList> {
+  int value = 100;
+
+  void change() {
+    setState(() {
+      value = 150;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
