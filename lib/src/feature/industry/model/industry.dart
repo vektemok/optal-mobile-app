@@ -1,45 +1,43 @@
-// To parse this JSON data, do
-//
-//     final industry = industryFromJson(jsonString);
-
 import 'dart:convert';
 
-Industry industryFromJson(String str) => Industry.fromJson(json.decode(str));
+List<Industry> industryFromJson(String str) =>
+    List<Industry>.from(json.decode(str).map((x) => Industry.fromJson(x)));
 
-String industryToJson(Industry data) => json.encode(data.toJson());
+String industryToJson(List<Industry> data) =>
+    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class Industry {
+  int id;
   String code;
+  String name;
   String description;
   String iconUrl;
-  int id;
-  String name;
   int sortOrder;
 
   Industry({
+    required this.id,
     required this.code,
+    required this.name,
     required this.description,
     required this.iconUrl,
-    required this.id,
-    required this.name,
     required this.sortOrder,
   });
 
   factory Industry.fromJson(Map<String, dynamic> json) => Industry(
+    id: json["id"],
     code: json["code"],
+    name: json["name"],
     description: json["description"],
     iconUrl: json["icon_url"],
-    id: json["id"],
-    name: json["name"],
     sortOrder: json["sort_order"],
   );
 
   Map<String, dynamic> toJson() => {
+    "id": id,
     "code": code,
+    "name": name,
     "description": description,
     "icon_url": iconUrl,
-    "id": id,
-    "name": name,
     "sort_order": sortOrder,
   };
 }
