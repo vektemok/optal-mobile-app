@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:optal_mobile/src/core/theme/font/optal_fonts.dart';
-import 'package:optal_mobile/src/core/theme/visual_elements/visual_elements.dart';
-import 'package:optal_mobile/src/core/widget/primary_filled_button.dart';
+import 'package:optal_mobile/src/core/uikit/text/roboto_text_scheme.dart';
 
 class OptalApp extends ConsumerWidget {
   const OptalApp({super.key});
@@ -14,8 +12,7 @@ class OptalApp extends ConsumerWidget {
     return MaterialApp(
       title: 'Optal',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(extensions: [optalFonts, visualElements]),
-      home: HomeWidget(),
+      theme: ThemeData(extensions: [RobotoTextScheme.ligth()]),
       builder: (context, child) => MediaQuery(
         key: builderKey,
         data: MediaQuery.of(context).copyWith(textScaler: TextScaler.noScaling),
