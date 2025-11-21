@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:optal_mobile/src/core/uikit/button/primary_filled_button.dart';
 import 'package:optal_mobile/src/core/uikit/text/roboto_text_scheme.dart';
 
 class OptalApp extends ConsumerWidget {
@@ -13,6 +14,7 @@ class OptalApp extends ConsumerWidget {
       title: 'Optal',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(extensions: [RobotoTextScheme.ligth()]),
+      home: Home(),
       builder: (context, child) => MediaQuery(
         key: builderKey,
         data: MediaQuery.of(context).copyWith(textScaler: TextScaler.noScaling),
@@ -33,6 +35,6 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(onPressed: () {}, child: const Text("hello"));
+    return Scaffold(body: Center(child: PrimaryFilledButton.orange()));
   }
 }
