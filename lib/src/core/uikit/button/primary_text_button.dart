@@ -32,7 +32,7 @@ class PrimaryTextButton extends StatelessWidget {
     return PrimaryTextButton(
       textStyle:
           textStyle?.copyWith(color: _primaryGreen) ??
-          TextStyle(color: _primaryOrange),
+          const TextStyle(color: _primaryOrange),
       text: text,
       onPressed: onPressed,
     );
@@ -46,7 +46,7 @@ class PrimaryTextButton extends StatelessWidget {
     return PrimaryTextButton(
       textStyle:
           textStyle?.copyWith(color: _primaryGreen) ??
-          TextStyle(color: _primaryGreen),
+          const TextStyle(color: _primaryGreen),
       text: text,
       onPressed: onPressed,
     );
@@ -60,7 +60,7 @@ class PrimaryTextButton extends StatelessWidget {
     return PrimaryTextButton(
       textStyle:
           textStyle?.copyWith(color: _primaryDarkGrey) ??
-          TextStyle(color: _primaryDarkGrey),
+          const TextStyle(color: _primaryDarkGrey),
       text: text,
       onPressed: onPressed,
     );
@@ -74,7 +74,7 @@ class PrimaryTextButton extends StatelessWidget {
     return PrimaryTextButton(
       textStyle:
           textStyle?.copyWith(color: _primaryWhite) ??
-          TextStyle(color: _primaryWhite),
+          const TextStyle(color: _primaryWhite),
       text: text,
       onPressed: onPressed,
     );
