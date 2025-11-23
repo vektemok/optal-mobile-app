@@ -11,6 +11,13 @@
             "toolArgs": [
                 "--dart-define-from-file=config/local.json"
             ]
+        },{
+            "name": "optal_mobile (prod)",
+            "request": "launch",
+            "type": "dart",
+            "toolArgs": [
+                "--dart-define-from-file=config/PROD.json"
+            ]
         },
     ]
 }
