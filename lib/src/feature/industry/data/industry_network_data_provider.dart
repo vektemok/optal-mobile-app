@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:optal_mobile/src/core/provider/rest_client_provider.dart';
+import 'package:optal_mobile/src/core/provider/dio_provider.dart';
 import 'package:optal_mobile/src/feature/industry/model/industry.dart';
 
 /// {@template industry_network_data_provider}
@@ -33,5 +33,5 @@ final class IndustryNetworkDataProviderImpl
 final industryNetworkDataProvider = Provider<IndustryNetworkDataProvider>((
   ref,
 ) {
-  return IndustryNetworkDataProviderImpl(ref.watch(restClientProvider));
+  return IndustryNetworkDataProviderImpl(ref.watch(dioProvider));
 });

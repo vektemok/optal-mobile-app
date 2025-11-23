@@ -31,8 +31,16 @@ class _IndustryListState extends ConsumerState<IndustryList> {
         crossAxisSpacing: 10,
         mainAxisSpacing: 10,
         rowPatterns: [
-          [100, 100, 180, 100, 180],
-          [180, 100, 100, 100, 180],
+          [
+            100, 100, 180, 100,
+
+            //180
+          ],
+          [
+            180, 100, 100, 100,
+
+            //   180
+          ],
         ],
         crossAxisCount: 2,
       ),
@@ -51,10 +59,7 @@ class _IndustryListState extends ConsumerState<IndustryList> {
         return Card(
           color: Color(0xff262624),
           margin: EdgeInsets.zero,
-          child: Text(
-            '${industry.name} $index',
-            style: TextStyle(color: Colors.white),
-          ),
+          child: Text(industry.name, style: TextStyle(color: Colors.white)),
         );
       },
     );
